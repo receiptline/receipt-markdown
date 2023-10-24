@@ -1,0 +1,99 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Receipt",
+	"patterns": [
+		{
+			"include": "#escapes"
+		}
+	],
+	"repository": {
+		"escapes": {
+			"patterns": [
+				{
+					"match": "^[ \t]*(\\|)?[ \t]*([-=]+)[ \t]*(\\|)?[ \t]*$",
+					"captures": {
+						"1": { "name": "markup.bold.receipt" },
+						"2": { "name": "constant.language.receipt" },
+						"3": { "name": "markup.bold.receipt" }
+					}
+				},
+				{
+					"name": "constant.character.escape.receipt",
+					"match": "\\\\[^x]|\\\\x\\h{2}"
+				},
+				{
+					"name": "markup.bold.receipt",
+					"match": "\\|"
+				},
+				{
+					"name": "constant.language.receipt",
+					"match": "[\"_`^~]"
+				},
+				{
+					"match": "(\\{)((?:\\\\[^x]|\\\\x\\h{2}|.)*?)(\\})",
+					"captures": {
+						"1": { "name": "keyword.control.receipt" },
+						"2": { "patterns": [{"include": "#properties"}] },
+						"3": { "name": "keyword.control.receipt" }
+					}
+				},
+				{
+					"name": "invalid.illegal.receipt",
+					"match": "[{}]"
+				}
+			]
+		},
+		"properties": {
+			"patterns": [
+				{
+					"match": "((?:\\\\[^x]|\\\\x\\h{2}|.)*?)(;|$)",
+					"captures": {
+						"1": { "patterns": [{"include": "#property"}] },
+						"2": { "name": "keyword.operator.receipt" }
+					}
+				}
+			]
+		},
+		"property": {
+			"patterns": [
+				{
+					"match": "(.*?)(:)(.*)",
+					"captures": {
+						"1": { "patterns": [{"include": "#key"}] },
+						"2": { "name": "keyword.operator.receipt" },
+						"3": { "patterns": [{"include": "#value"}] }
+					}
+				}
+			]
+		},
+		"key": {
+			"patterns": [
+				{
+					"name": "variable.name.receipt",
+					"match": "[_a-zA-Z][_0-9a-zA-Z]*"
+				},
+				{
+					"name": "invalid.illegal.receipt",
+					"match": "."
+				}
+			]
+		},
+		"value": {
+			"patterns": [
+				{
+					"name": "constant.character.escape.receipt",
+					"match": "\\\\[^x]|\\\\x\\h{2}"
+				},
+				{
+					"name": "invalid.illegal.receipt",
+					"match": "[{|}]"
+				},
+				{
+					"name": "string.unquoted.receipt",
+					"match": "."
+				}
+			]
+		}
+	},
+	"scopeName": "source.receipt"
+}
