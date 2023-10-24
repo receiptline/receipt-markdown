@@ -123,9 +123,9 @@ function activate(context) {
 		{
 			label: 'image',
 			kind: vscode.CompletionItemKind.Property,
-			insertText: new vscode.SnippetString('image:Drag the png file, hold [shift] and drop it on a blank line'),
+			insertText: new vscode.SnippetString('comment:Drag the PNG file, hold [Shift] and drop it on a blank line'),
 			detail: 'Insert image.',
-			documentation: new vscode.MarkdownString('```\n{image: base64 png format}\n{i: base64 png format}\n```\n- Drag the png file, hold [shift] and drop it on a blank line\n- The png file is recommended to be monochrome and has no auxiliary chunks')
+			documentation: new vscode.MarkdownString('```\n{image: base64 png format}\n{i: base64 png format}\n```\n- Drag the PNG file, hold [Shift] and drop it on a blank line\n- The PNG file is recommended to be monochrome and has no auxiliary chunks')
 		},
 		{
 			label: 'code',
