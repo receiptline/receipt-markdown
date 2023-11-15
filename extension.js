@@ -124,9 +124,9 @@ function activate(context) {
 		{
 			label: 'image',
 			kind: vscode.CompletionItemKind.Property,
-			insertText: new vscode.SnippetString('comment:Drag the PNG file, hold [Shift] and drop it on a blank line'),
+			insertText: new vscode.SnippetString('comment:Drag a PNG file, hold [Shift] and drop it on a blank line'),
 			detail: 'Insert image.',
-			documentation: new vscode.MarkdownString('```\n{image: base64 png format}\n{i: base64 png format}\n```\n- Drag the PNG file, hold [Shift] and drop it on a blank line\n- The PNG file is recommended to be monochrome and has no auxiliary chunks')
+			documentation: new vscode.MarkdownString('```\n{image: base64 png format}\n{i: base64 png format}\n```\n- Drag a PNG file, hold [Shift] and drop it on a blank line\n- The PNG file is recommended to be monochrome and has no auxiliary chunks')
 		},
 		{
 			label: 'code',
@@ -154,7 +154,7 @@ function activate(context) {
 			kind: vscode.CompletionItemKind.Property,
 			insertText: new vscode.SnippetString('option:${1|code128,code93,nw7,codabar,itf,code39,jan,ean,upc,qrcode|},${2|2,3,4|},${3|24,48,72,96,120,144,168,192,216,240|},${4|nohri,hri|},${5|l,m,q,h|}'),
 			detail: 'Set barcode / 2D code options.',
-			documentation: new vscode.MarkdownString('```\n{option: value, value, ...}\n{o: value, value, ...}\n```\n- Barcode options\n  - (barcode type) code128, code93, nw7, codabar, itf, code39, jan, ean, upc\n  - (module width) 2, 3, 4\n  - (module height) 24 - 240\n  - (human readable interpretation) hri, nohri\n- 2D code options\n  - (2D code type) qrcode\n  - (cell size) 3, 4, 5, 6, 7, 8\n  - (error correction level) l, m, q, h\n- Note\n  - Values are separated by commas or one or more whitespaces\n  - Values can be in any order\n  - Each value can be omitted\n  - The unit is pixel\n  - The default barcode options are code128, 2, 72, nohri\n  - The default qrcode options are 3, l')
+			documentation: new vscode.MarkdownString('```\n{option: value, value, ...}\n{o: value, value, ...}\n```\n- Barcode options\n  - (barcode type) code128, code93, nw7, codabar, itf, code39, jan, ean, upc\n  - (module width) 2, 3, 4\n  - (module height) 24 - 240\n  - (human readable interpretation) hri, nohri\n- 2D code options\n  - (2D code type) qrcode\n  - (cell size) 3, 4, 5, 6, 7, 8\n  - (error correction level) l, m, q, h\n- Note\n  - Values are separated by commas or one or more whitespaces\n  - Values can be in any order\n  - Each value can be omitted\n  - The unit is pixel\n  - The default barcode options are code128, 2, 72, nohri\n  - The default 2D code options are qrcode, 3, l')
 		},
 		{
 			label: 'border',
