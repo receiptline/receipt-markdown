@@ -17,6 +17,7 @@ limitations under the License.
 // QR Code is a registered trademark of DENSO WAVE INCORPORATED.
 
 const vscode = require('vscode');
+const path = require('path');
 
 function activate(context) {
 
@@ -37,7 +38,7 @@ function activate(context) {
 
 		const panel = vscode.window.createWebviewPanel(
 			'receipt',
-			`Preview ${editor.document.fileName}`,
+			`Preview ${path.basename(editor.document.fileName)}`,
 			vscode.ViewColumn.Beside,
 			{ enableScripts: true }
 		);
