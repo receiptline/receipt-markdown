@@ -151,17 +151,17 @@ Text, images, barcodes, and 2D codes cannot be placed on the same line.
 { width: * 10; comment: the column width is specified in characters }
 ```
 
-|Key|Abbreviation|Value|Case-sensitive|Default|Saved|Description|
-|---|---|---|---|---|---|---|
-|`image`|`i`|_base64 png format_|✓|-|-|Image<br>(Recommended: monochrome, critical chunks only)|
-|`code`|`c`|_textdata_|✓|-|-|Barcode / 2D code|
-|`command`|`x`|_textdata_|✓|-|-|Device-specific commands|
-|`comment`|`_`|_textdata_|✓|-|-|Comment|
-|`option`|`o`|_see below_|-|`code128 2 72 nohri 3 l`|✓|Barcode / 2D code options<br>(Options are separated by commas or one or more whitespaces)|
-|`border`|`b`|`line`<br>`space`<br>`none`<br>`0` - `2`|-|`space`|✓|Column border (chars)<br>(Border width: line=1, space=1, none=0)|
-|`width`|`w`|`auto`<br>`*`<br>`0` -|-|`auto`<br>(`*` for all columns)|✓|Column widths (chars)<br>(Widths are separated by commas or one or more whitespaces)|
-|`align`|`a`|`left`<br>`center`<br>`right`|-|`center`|✓|Line alignment<br>(Valid when line width &lt; CPL)|
-|`text`|`t`|`wrap`<br>`nowrap`|-|`wrap`|✓|Text wrapping|
+|Key|Abbr|Value|Default|Description|
+|---|---|---|---|---|
+|`image`|`i`|_base64 png format_|-|Insert image<br>Drag a PNG file, hold [Shift] and drop it on a blank line<br>(Recommended: monochrome, critical chunks only)|
+|`code`|`c`|_textdata_|-|Insert barcode / 2D code|
+|`command`|`x`|_textdata_|-|Insert device-specific commands|
+|`comment`|`_`|_textdata_|-|Insert comment|
+|`option`|`o`|_see below_|`code128 2 72 nohri 3 l`|Set barcode / 2D code options<br>(Options are separated by commas or one or more whitespaces)|
+|`border`|`b`|`line`<br>`space`<br>`none`<br>`0` - `2`|`space`|Set column border (chars)<br>(Border width: line=1, space=1, none=0)|
+|`width`|`w`|`auto`<br>`*`<br>`0` -|`auto`<br>(`*` for all columns)|Set column widths (chars)<br>(Widths are separated by commas or one or more whitespaces)|
+|`align`|`a`|`left`<br>`center`<br>`right`|`center`|Set line alignment<br>(Valid when line width &lt; characters per line)|
+|`text`|`t`|`wrap`<br>`nowrap`|`wrap`|Set text wrapping|
 
 ### Barcode options
 

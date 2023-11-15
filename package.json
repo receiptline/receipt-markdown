@@ -2,7 +2,7 @@
   "name": "receipt-markdown",
   "displayName": "Receipt Markdown",
   "description": "Receipt description language, editing and preview",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "publisher": "receiptline",
   "author": {
     "name": "Open Foodservice System Consortium"
