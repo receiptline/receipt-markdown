@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.1] - 2025-10-13
+### Fixed
+- receiptline.js
+
 ## [1.1.0] - 2023-11-15
 ### Added
 - Base64 validation for images
