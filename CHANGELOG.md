@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.2] - 2025-10-16
+### Fixed
+- receiptline.js
+
 ## [1.1.1] - 2025-10-13
 ### Fixed
 - receiptline.js
