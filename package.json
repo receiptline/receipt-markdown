@@ -1,0 +1,95 @@
+{
+  "name": "receipt-markdown",
+  "displayName": "Receipt Markdown",
+  "description": "Receipt description language, editing and preview",
+  "version": "2.0.0",
+  "publisher": "receiptline",
+  "author": {
+    "name": "Open Foodservice System Consortium"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/receiptline",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/receiptline/receipt-markdown"
+  },
+  "bugs": "https://github.com/receiptline/receipt-markdown/issues",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "ofsc",
+    "receiptline",
+    "receipt",
+    "markdown",
+    "pos",
+    "kitchen",
+    "invoice",
+    "ticket",
+    "kiosk",
+    "printer",
+    "escpos",
+    "starprnt"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [{
+      "id": "receipt",
+      "aliases": [
+        "Receipt",
+        "receipt",
+        "ReceiptLine",
+        "receiptline"
+      ],
+      "extensions": [
+        ".receipt"
+      ],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "receipt",
+      "scopeName": "source.receipt",
+      "path": "./syntaxes/receipt.tmLanguage.json"
+    }],
+    "menus": {
+      "editor/title": [{
+        "command": "receipt-markdown.preview",
+        "when": "resourceLangId == receipt",
+        "group": "navigation"
+      }]
+    },
+    "keybindings": [{
+      "command": "receipt-markdown.preview",
+      "key": "ctrl+k v",
+      "mac": "cmd+k v",
+      "when": "resourceLangId == receipt"
+    }],
+    "commands": [{
+      "command": "receipt-markdown.preview",
+      "title": "Open Preview to the Side",
+      "icon": "$(open-preview)"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
