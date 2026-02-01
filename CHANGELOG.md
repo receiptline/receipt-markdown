@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.0.0] - 2026-02-01
+### Changed
+- receiptline.js
+
 ## [3.0.0] - 2025-11-30
 ### Changed
 - Japanese font
