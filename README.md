@@ -6,18 +6,6 @@ The Receipt Markdown extension adds language support for receipt description lan
 
 ![screenshot](https://raw.githubusercontent.com/receiptline/receipt-markdown/main/images/screenshot.png)  
 
-This language conforms to the OFSC ReceiptLine Specification.  
-https://www.ofsc.or.jp/receiptline/en/  
-
-ReceiptLine is the receipt description language that expresses the output image of small roll paper.  
-It supports printing paper receipts using a receipt printer and displaying electronic receipts on a POS system or smartphone.  
-It can be described simply with receipt markdown text data that does not depend on the paper width.  
-
-The edited file (*.receipt) can be printed on a receipt printer or converted to an image with ReceiptIO.  
-https://www.npmjs.com/package/receiptio  
-
-ReceiptIO is a simple print application for receipt printers that prints with easy markdown data for receipts and returns printer status. Even without a printer, it can output images.  
-
 ## Syntax
 
 ### Railroad diagram

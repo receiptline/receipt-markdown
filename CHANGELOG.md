@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.0.1] - 2026-07-02
+### Changed
+- receiptline.js
+
 ## [4.0.0] - 2026-02-01
 ### Changed
 - receiptline.js

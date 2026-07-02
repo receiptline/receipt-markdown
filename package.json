@@ -2,10 +2,10 @@
   "name": "receipt-markdown",
   "displayName": "Receipt Markdown",
   "description": "Receipt description language, editing and preview",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "publisher": "receiptline",
   "author": {
-    "name": "Open Foodservice System Consortium"
+    "name": "Open Foodservice System Consortium, Receipt Project"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/receiptline",
@@ -24,8 +24,6 @@
     "Other"
   ],
   "keywords": [
-    "ofsc",
-    "receiptline",
     "receipt",
     "markdown",
     "pos",
