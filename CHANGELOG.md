@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.0.2] - 2026-07-28
+### Changed
+- Project name
+
 ## [4.0.1] - 2026-07-02
 ### Changed
 - receiptline.js
